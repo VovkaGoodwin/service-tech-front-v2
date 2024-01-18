@@ -1,3 +1,10 @@
-const App = () => (<h1>Hello world</h1>);
+import { LogoutButton } from 'features/authentication/logout';
 
-export default App
+const App = () => (
+  <>
+    <h1>Hello world</h1>
+    <LogoutButton />
+  </>
+);
+
+export default App;

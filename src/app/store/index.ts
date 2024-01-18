@@ -1,8 +1,9 @@
-import store, {type RootState, type AppDispatch} from "@/app/store/store.ts";
+import ReduxProvider from './ReduxProvider.tsx';
 
-export default store;
+export default ReduxProvider;
 
 export type {
   RootState,
   AppDispatch,
-}
+  TypedListening
+} from '@/app/store/store.ts';

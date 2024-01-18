@@ -20,10 +20,15 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
+    "exactOptionalPropertyTypes": true,
 
     "typeRoots": ["node_modules/@types", "types/"],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "shared/*": ["./src/shared/*"],
+      "entities/*": ["./src/entities/*"],
+      "features/*": ["./src/features/*"],
+      "pages/*": ["./src/pages/*"]
     }
   },
   "include": ["src", "types"],
