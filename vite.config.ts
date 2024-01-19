@@ -11,6 +11,7 @@ export default defineConfig({
       shared: resolve(import.meta.dir, './src/shared'),
       entities: resolve(import.meta.dir, './src/entities'),
       features: resolve(import.meta.dir, './src/features'),
+      widgets: resolve(import.meta.dir, './src/widgets'),
       pages: resolve(import.meta.dir, './src/pages'),
     }
   }
