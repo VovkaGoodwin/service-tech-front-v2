@@ -1,12 +1,17 @@
-import { FC } from 'react';
+import type { FC } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button, Form, Input } from 'antd';
-import { type FormData } from '../../model/types.ts';
-import loginThunk from '../../model/login.ts';
+
 import { useAppDispatch } from 'shared/model';
+
+import type { FormData } from '../../model/types.ts';
+import loginThunk from '../../model/login.ts';
+
 
 const LoginForm: FC = () => {
   const [form] = Form.useForm<FormData>();
   const d = useAppDispatch();
+  const navigate = useNavigate();
 
   return (
     <Form
@@ -14,7 +19,7 @@ const LoginForm: FC = () => {
       onFinish={(data) => {
         d(loginThunk(data))
           .unwrap()
-          .then(console.log);
+          .then(() => navigate('/'));
       }}
     >
       <Form.Item

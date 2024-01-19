@@ -14,10 +14,11 @@ const useRoutes: UseRoutesHook = (isAuthenticated) => {
 
   if (isAuthenticated) {
     routesConfig = [{
-      path: '/',
+      path: '',
       element: (<MainLayout />),
       children: [{
-        index: true,
+        index: true,  
+        path: '/',
         element: (<SearchPage />)
       }, {
         path: '/switch',
