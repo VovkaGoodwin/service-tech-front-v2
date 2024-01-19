@@ -1,10 +1,5 @@
-import { LogoutButton } from 'features/authentication/logout';
-
 const App = () => (
-  <>
-    <h1>Hello world</h1>
-    <LogoutButton />
-  </>
+  <h1>Hello world</h1>
 );
 
 export default App;
