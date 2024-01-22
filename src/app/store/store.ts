@@ -2,14 +2,14 @@ import { configureStore, type TypedStartListening } from '@reduxjs/toolkit';
 
 import rootReducer from './rootReducer.ts';
 
-import { loginListener } from 'features/authentication/login';
+import { invalidateTokenListener } from 'features/authentication/invlaidateToken';
 import { baseApi } from 'shared/api';
 
 const store = configureStore({
   reducer: rootReducer,
   middleware: (b) =>
     b().prepend(baseApi.middleware)
-      .concat(loginListener.middleware),
+      .concat(invalidateTokenListener.middleware),
   devTools: import.meta.env.DEV
 });
 

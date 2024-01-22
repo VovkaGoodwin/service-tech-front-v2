@@ -14,7 +14,11 @@ const loginThunk = createAsyncThunk<
   'feature/authentication/login',
   async (body, { dispatch }) => {
     try {
-      await dispatch(sessionApi.endpoints.login.initiate(body)).unwrap();
+      const data = await dispatch(sessionApi.endpoints.login.initiate(body)).unwrap();
+      localStorage.setItem('auth', JSON.stringify({
+        isAuthenticated: true,
+        user: data
+      }));
     } catch (e) {
       console.error(e);
     }

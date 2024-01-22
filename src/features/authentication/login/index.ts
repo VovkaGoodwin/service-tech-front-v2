@@ -1,7 +1,7 @@
 import LoginForm from './ui/LoginForm';
-import loginListener from './model/listener.ts';
+import loginThunk from './model/login.ts';
 
 export {
   LoginForm,
-  loginListener,
+  loginThunk,
 };
